@@ -1,4 +1,4 @@
-package acrtcode.week1;
+package artcode.week1;
 
 import java.util.Scanner;
 
