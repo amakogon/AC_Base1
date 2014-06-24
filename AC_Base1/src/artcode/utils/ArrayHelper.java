@@ -2,6 +2,36 @@ package artcode.utils;
 
 public class ArrayHelper {
 
+	public static void printMatrix(int[][] matrix) {
+
+		for (int i = 0; i < matrix.length; i++) {
+			System.out.println();
+			for (int j = 0; j < matrix[i].length; j++) {
+				System.out.print(matrix[i][j] + " ");
+
+			}
+		}
+	}
+	
+	public static int[][] genMatrix(int rows, int columns){
+		int[][] matrix = new int[rows][columns];
+		for(int i = 0; i < matrix.length; i++){
+			for(int j = 0; j < matrix[i].length; j++){
+				matrix[i][j] = (int) (Math.random() * 100);
+			}
+		}
+		return matrix;
+	}
+
+	public static int[] genArrayInRange(int size, int a, int b) {
+		int[] mas = new int[size];
+		for (int i = 0; i < mas.length; i++) {
+			mas[i] = (int) ((Math.random() * (b - a)) + a);
+
+		}
+		return mas;
+	}
+
 	public static void printArray(int[] mas) {
 		for (int i = 0; i < mas.length; i++) {
 			System.out.print(mas[i] + " ");
@@ -52,4 +82,6 @@ public class ArrayHelper {
 		}
 		return mas;
 	}
+	
+	
 }
